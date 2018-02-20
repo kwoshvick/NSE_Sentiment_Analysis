@@ -19,7 +19,6 @@ class Credentials:
         auth = tweepy.OAuthHandler(twitter_credentials[0], twitter_credentials[1])
         auth.set_access_token(twitter_credentials[2], twitter_credentials[3])
         api = tweepy.API(auth)
-
         return api
 
 
