@@ -9,18 +9,14 @@ class Cleaner:
 
     def read_csv(self,csv_name):
         cleaned_text = []
-        with open(csv_name, newline='', encoding='utf-8') as csvfile:
+        with open('../data/twitter_data/raw_data/'+csv_name+'.csv', newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 text = row['text']
-                # print(text)
-                a = self.clean_tweets(text)
-                # print(a)
-                cleaned_text.append(a)
+                clean_text = self.clean_tweets(text)
+                cleaned_text.append(clean_text)
 
-        print(cleaned_text)
-
-        self.save_cleaned_csv('me',cleaned_text)
+        self.save_cleaned_csv('cleaned_'+csv_name,cleaned_text)
 
     def clean_tweets(self,tweet):
         # harmonize the cases
@@ -37,28 +33,52 @@ class Cleaner:
         # removed_punctuation = removed_retweet.translate(self.remove_punctuations)
         # print(removed_username)
         # remove spaces
-        remove_g_t = removed_username.replace("&gt", "", True)
-        final_text = remove_g_t.replace("&amp", "", True)
-
-        n = final_text.split()
-
+        remove_g_t = removed_retweet.replace("&gt", "", True)
+        remove_a_m_p = remove_g_t.replace("&amp", "", True)
+        final_text = remove_a_m_p
         return final_text
 
 
     def save_cleaned_csv(self,name,tweets_list):
-        print(tweets_list)
         with open('../data/twitter_data/cleaned_data/' + name + '.csv', 'w') as f:
             writer = csv.writer(f)
             writer.writerow(["text"])
             for tweet in tweets_list:
-                # wr.writerow([item, ])
                 writer.writerow([tweet,])
         pass
 
 
 if __name__ == "__main__":
     c = Cleaner()
-    c.read_csv('Africafinancial.csv')
+    tweets_csvs = [
+        'Taifa_Leo',
+        'BD_Africa',
+        'RadioCitizenFM',
+        'citizentvkenya',
+        'KTNKenya',
+        'K24Tv',
+        'StandardKenya',
+        'TheStarKenya',
+        'radiomaisha',
+        'KBCChannel1',
+        'CapitalFMKenya',
+        'African_Markets',
+        'Africafinancial',
+        'InvestInAfrica',
+        'AfricanInvestor',
+        'forbesafrica',
+        'cnbcafrica',
+        'BBCAfrica',
+        'CNNAfrica',
+        'allafrica',
+        'ReutersAfrica',
+        'VenturesAfrica',
+        'BBGAfrica',
+        'GhettoRadio895'
+    ]
+
+    for tweets_csv in tweets_csvs:
+        c.read_csv(tweets_csv)
 
 
 
