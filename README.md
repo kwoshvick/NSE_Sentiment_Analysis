@@ -1,1 +1,1 @@
-# NSE-Financial-News-Crawle-and--Predictor
+# Nairobi Stock Exchange Financial News Crawler & Sentiment Analysis 
