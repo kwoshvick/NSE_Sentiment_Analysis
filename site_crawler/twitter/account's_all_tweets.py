@@ -30,9 +30,9 @@ class Account_All_Tweets:
                 oldest = alltweets[-1].id - 1
                 print("...%s tweets downloaded so far" % (len(alltweets)))
             # transform the tweepy tweets into a 2D array that will populate the csv
-            outtweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")] for tweet in alltweets]
+            outtweets = [[tweet.id_str, tweet.created_at, tweet.text] for tweet in alltweets]
             # write the csv
-            with open('../data/twitter_data/'+profile_name+'.csv', 'w') as f:
+            with open('../data/twitter_data/raw_data/'+profile_name+'.csv', 'w') as f:
                 writer = csv.writer(f)
                 writer.writerow(["id", "created_at", "text"])
                 writer.writerows(outtweets)
@@ -50,7 +50,7 @@ if __name__ == "__main__":
         'StandardKenya',
         'TheStarKenya',
         'radiomaisha',
-        'KBCChannel1'
+        'KBCChannel1',
         'CapitalFMKenya',
         'African_Markets',
         'Africafinancial',
