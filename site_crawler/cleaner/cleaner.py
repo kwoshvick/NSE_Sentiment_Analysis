@@ -1,6 +1,7 @@
 import csv
 import re
 import string
+import html
 
 class Cleaner:
 
@@ -38,6 +39,11 @@ class Cleaner:
         final_text = remove_a_m_p
         return final_text
 
+    def pre_cleaning(self,text):
+        #escaping html characters
+        html_escaped = html.unescape(text)
+        final_text = html_escaped.replace(';','')
+        return final_text
 
     def save_cleaned_csv(self,name,tweets_list):
         with open('../data/twitter_data/cleaned_data/' + name + '.csv', 'w') as f:
@@ -74,7 +80,11 @@ if __name__ == "__main__":
         'ReutersAfrica',
         'VenturesAfrica',
         'BBGAfrica',
-        'GhettoRadio895'
+        'GhettoRadio895',
+        'kenyanwalstreet',
+        'SokoAnalyst',
+        'NSEKenya',
+        'wazua'
     ]
 
     for tweets_csv in tweets_csvs:

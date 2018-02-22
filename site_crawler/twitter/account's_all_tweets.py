@@ -1,11 +1,12 @@
 import csv
 import simplejson
 from site_crawler.twitter.credentials import Credentials
-
+from site_crawler.cleaner.cleaner import Cleaner
 
 class Account_All_Tweets:
     def __init__(self):
         credentials = Credentials()
+        self.cleaner = Cleaner()
         self.api = credentials.authentinticate_twitter()
 
     def get_all_tweets(self,profile_name):
@@ -30,7 +31,7 @@ class Account_All_Tweets:
                 oldest = alltweets[-1].id - 1
                 print("...%s tweets downloaded so far" % (len(alltweets)))
             # transform the tweepy tweets into a 2D array that will populate the csv
-            outtweets = [[tweet.id_str, tweet.created_at, tweet.text] for tweet in alltweets]
+            outtweets = [[tweet.id_str, tweet.created_at, self.cleaner.pre_cleaning(tweet.text)] for tweet in alltweets]
             # write the csv
             with open('../data/twitter_data/raw_data/'+profile_name+'.csv', 'w') as f:
                 writer = csv.writer(f)
@@ -64,7 +65,11 @@ if __name__ == "__main__":
         'ReutersAfrica',
         'VenturesAfrica',
         'BBGAfrica',
-        'GhettoRadio895'
+        'GhettoRadio895',
+        'kenyanwalstreet',
+        'SokoAnalyst',
+        'NSEKenya',
+        'wazua'
     ]
 
     for twitter_handle in twitter_handles:

@@ -1,20 +1,38 @@
 import re
 import string
+import html
+from html.parser import HTMLParser
 
-m = 'RT ?  ! hhh&amprr! @FrontPagesKe Learn the fundamentals of a "Cash Flow Statement" https://t.co/H0SNvWzKk4 #IMLeducate https://t.co/f0LFl0BwAH @kwoshvick #manahe_tyh'
+m = ' ;      &gtRT ? ;     ;      ! hhh&amprr! @FrontPagesKe Learn the fundamentals of a "Cash Flow Statement" https://t.co/H0SNvWzKk4 #IMLeducate https://t.co/f0LFl0BwAH @kwoshvick #manahe_tyh'
 
-m = m.lower()
-# text = re.sub(r'^https?:\/\/.*[\r\n]*', '', m, flags=re.MULTILINE)
+x = m.split()
 
-translator = str.maketrans('', '', string.punctuation)
+z = ' '.join(x)
 
-n = re.sub(r'http\S+', '', m) #url
-o = re.sub(r'#\w*','',n) # hastag
-p = re.sub(r'@\w*\s?','',o) #username
-q = p.replace("rt","",True) # remove to retweet
-r = q.replace(['&amp','&gt'],[""],True)
+n = z.replace(';','')
 
-print(r)
+# re.sub(',','', s)
+print(n)
+
+# m = "b'RT @MwananchiNews: Israel yataka wahamiaji Waafrika waondoke&gt	&gt	&gt	https://t.co/h1RDix0jIH https://t.co/j5JOCF28WX'"
+# p = html.unescape(m)
+#
+# print(p[2:][:-1])
+
+# print(p.decode('utf8').encode('ascii','ignore'))
+
+# m = m.lower()
+# # text = re.sub(r'^https?:\/\/.*[\r\n]*', '', m, flags=re.MULTILINE)
+#
+# translator = str.maketrans('', '', string.punctuation)
+#
+# n = re.sub(r'http\S+', '', m) #url
+# o = re.sub(r'#\w*','',n) # hastag
+# p = re.sub(r'@\w*\s?','',o) #username
+# q = p.replace("rt","",True) # remove to retweet
+# r = q.replace(['&amp','&gt'],[""],True)
+#
+# print(r)
 
 # s = r.replace("&gt","",True)
 #
@@ -26,10 +44,16 @@ print(r)
 
 # print
 # import csv
-# with open('test.csv', newline='', encoding='utf-8') as csvfile:
+# with open('Taifa_Leo2.csv', encoding='utf-8',) as csvfile:
 #     reader = csv.DictReader(csvfile)
 #     for row in reader:
-#         print(row[''])
-#         # text = row['text']
-#         # print(text)
-#         # cleaned_text = self.clean_tweets(text)
+#         a = row['text']
+#         print(a)
+#         a = html.unescape(a)
+#         #
+#         print(a)
+        # b = a[2:][:-1]
+        # print(b.replace("[^\x00-\x7F]+","",True))
+        # text = row['text']
+        # print(text)
+        # cleaned_text = self.clean_tweets(text)
