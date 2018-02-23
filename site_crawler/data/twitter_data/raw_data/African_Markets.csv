@@ -1,4 +1,12 @@
-id,created_at,text
+id,created_at,text,label
+966807118220353537,2018-02-22 22:49:14,CoreShares lists Global Dividend ETF on the #Johannesburg Stock Exchange https://t.co/j75HG4ors6
+966764056785899520,2018-02-22 19:58:07,Sanctions contre 33 entreprises cotées à la #Bourse du #Nigéria https://t.co/tU0pG6KTgw
+966764054806134791,2018-02-22 19:58:06,#MTN #Ghana choisit IC Securities pour l'accompagner dans son introduction à la #bourse locale https://t.co/iI0p4pQTNy
+966764053086507009,2018-02-22 19:58:06,Le #Kenya lève 2 milliards $ à l'issue de l'émission de son deuxième #eurobond https://t.co/j1XS0jrhIA
+966764051115204609,2018-02-22 19:58:06,#Kenya raises $2bn in fresh #Eurobond issue https://t.co/HGZlsU0yfU
+966764048862900224,2018-02-22 19:58:05,South #Africa raises VAT for first time in 25 years https://t.co/u4LFTJqmce
+966764047126482944,2018-02-22 19:58:05,Google enables M-Pesa payments on its app store https://t.co/CXZNLAHBms
+966673946732105728,2018-02-22 14:00:03,RT @PaulWallace123: A $14bn order book shows investors still crave African bonds. #Kenya #Nigeria #Egypt https://t.co/Uwpj9lAP2u @markets h…
 966378059959078912,2018-02-21 18:24:18,#Zambia's central bank cuts rate by another 50 bps on steady inflation https://t.co/pqtwn6PgiW
 966378058268725249,2018-02-21 18:24:18,Kenyan bank CBA acquires Crane Bank #Rwanda https://t.co/f0wnl6uny3
 966378055198441472,2018-02-21 18:24:17,#Rwanda : la banque kenyane CBA s'offre Crane Bank https://t.co/FMnldjlm3i
@@ -1129,6 +1137,7 @@ https://t.co/nfYSutA3Yb https…"
 773311899056340992,2016-09-07 00:08:18,#Uber Loses at Least $1.2 Billion in First Half of 2016  https://t.co/fUu3LrlfDm
 772540094985150464,2016-09-04 21:01:26,"AM Weekly Market Commentary - September 2, 2016 https://t.co/IWJ5SMRDtA https://t.co/pKYQ9f3miZ"
 772443454634921984,2016-09-04 14:37:25,RT @PIMCO: #Emergingmarkets are still on the road to recovery but there is evidence of improvement https://t.co/7TtDsNhZ8n https://t.co/VKh…
+771813182432247808,2016-09-02 20:52:56,#BRVM : cotation du premier emprunt obligataire de l'Etat du #Mali https://t.co/4n8bzKdo29 https://t.co/AXGdZqVMXX
 771636553412030464,2016-09-02 09:11:05,"@dseinsights Many thanks for your feedback, this has been corrected"
 771453469312057349,2016-09-01 21:03:34,"Le sud-africain Famous Brands rachète le britannique Gourmet Burger Kitchen pour 143,3… https://t.co/b5czExvdB7 https://t.co/yx3OOZh2zE"
 771375557942607872,2016-09-01 15:53:59,South #Africa's Famous Brands buys British burger chain for $140 million https://t.co/ehuNcRBoSZ https://t.co/Ebl0CISg2V
@@ -3249,25 +3258,3 @@ http://t.co/PKJJQW8hel"
 502465109131030528,2014-08-21 14:39:52,UT Bank Ltd - Financial statements for the half year ending june 2014 http://t.co/Ob5gbLrII2
 502462802213502976,2014-08-21 14:30:42,Unilever Ghana Ltd - Financial statements for the half year ending june 2014 http://t.co/yeZOg2RqGT
 502462088082911232,2014-08-21 14:27:51,Tullow Oil Plc - Financial statements for the half year ending june 2014 http://t.co/Pt2liuePFI
-502461579343183872,2014-08-21 14:25:50,Starwin Products Ltd - Financial statements for the half year ending june 2014 http://t.co/lXlA86rtJf
-502459718074658816,2014-08-21 14:18:26,Societe Generale Ghana Ltd - Financial statements for the half year ending june 2014 http://t.co/TZaQOZpHAz
-502459357452582912,2014-08-21 14:17:00,Standard Chartered Bank Ghana Ltd - Financial statements for the half year ending june 2014 http://t.co/Szd4iB9Fzy
-502458152152207360,2014-08-21 14:12:13,Pioneer Kitchenware Ltd - Q1 & HY 2014 Financial statements http://t.co/ioh1mdM66F
-502457136237252608,2014-08-21 14:08:11,Mega African Capital Ltd - Financial statements for the half year ending june 2014 http://t.co/1KtZpxePVu
-502456774562439168,2014-08-21 14:06:44,Ghana Commercial Bank Ltd - Financial statements for the half year ending june 2014 http://t.co/1kVnbNzWVr
-502455596789297152,2014-08-21 14:02:04,Fan Milk Ltd - Financial statements for the half year ending june 2014  http://t.co/AVtd3HM0bl
-502454205660278784,2014-08-21 13:56:32,Ecobank Transnational Incorporated - Unaudited financial statements for the half year ending june 2014  http://t.co/2ysvnuAJdZ
-502453768173408256,2014-08-21 13:54:48,Enterprise Group Ltd - Unaudited financial statements for the half year ending june 2014  http://t.co/9vEU1xjwYY
-502453488778227713,2014-08-21 13:53:41,Ecobank Ghana Ltd - Unaudited financial statements for the half year ending june 2014  http://t.co/2248n5GmUM
-502453124830076928,2014-08-21 13:52:14,Camelot Ghana Ltd - Unaudited financial statements for the half year ending june 2014  http://t.co/TD3NM2Z5VL
-502448577252450304,2014-08-21 13:34:10,Clydestone (Ghana) Ltd - Unaudited financial statements for the half year ending june 2014 http://t.co/kc2GoeOBBg
-502447884961607680,2014-08-21 13:31:25,CAL Bank Ltd - Financial statements for the half year ending june 2014 http://t.co/Vozfnnh6RY
-502447351479672832,2014-08-21 13:29:18,Benso Oil Palm Plantation Ltd - Financial statements for the half year ending june 2014 http://t.co/NUtr2V6tX1
-502444769713598465,2014-08-21 13:19:02,AngloGold Ashanti Ltd - Financial statements for the half year ending june 2014 http://t.co/K44w8NxPir
-502381565117100032,2014-08-21 09:07:53,Ghana company launches country's first 4G data network http://t.co/D5j4jgNH9X
-502376725083193344,2014-08-21 08:48:39,Moody's downgrades South Africa's four biggest banks http://t.co/D1Phi2dDsN
-502103066381139968,2014-08-20 14:41:14,West African Power Industry Convention (WAPIC) http://t.co/7ONxHsHKnU @WAPIC_expo
-502101036690329600,2014-08-20 14:33:10,The 3rd East Africa Oil and Gas Summit and Exhibition http://t.co/DtUgxNu5VE  @EAOGS
-502043818116407297,2014-08-20 10:45:48,Uganda-UK Investment Forum 2014 http://t.co/8vfxdHB7pM  @UGConventionUK
-501728145360179201,2014-08-19 13:51:26,AngloGold Ashanti To Delist From London Stock Exchange http://t.co/7f3AwAVIrq via @MorningstarFR
-501347794821447681,2014-08-18 12:40:03,StanChart Kenya H1 profit buoyed by higher lending http://t.co/H3NjeoRpWK

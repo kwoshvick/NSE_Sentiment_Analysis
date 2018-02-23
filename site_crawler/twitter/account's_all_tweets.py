@@ -35,7 +35,7 @@ class Account_All_Tweets:
             # write the csv
             with open('../data/twitter_data/raw_data/'+profile_name+'.csv', 'w') as f:
                 writer = csv.writer(f)
-                writer.writerow(["id", "created_at", "text"])
+                writer.writerow(["id", "created_at", "text","label"])
                 writer.writerows(outtweets)
             pass
 

@@ -1,4 +1,4 @@
-id,created_at,text
+id,created_at,text,label
 966622409318129664,2018-02-22 10:35:16,What is the Consumer Price Index? - https://t.co/wINnM62eeE https://t.co/lRw06qm1di
 966360012024004608,2018-02-21 17:12:35,Zambeef | RNS Director Share Dealing – Tim Pollock 2018 Feb (AIM) https://t.co/Q3fHfyfSyQ $ZAMBEEF.zm https://t.co/dVxDVkNVDA
 965609697427337216,2018-02-19 15:31:06,Amalgamation and Merger of The Leasing and Finance Company of Malawi Limited (“LFC”) with First Merchant Bank Plc (… https://t.co/Xyj3II49wK
@@ -3213,42 +3213,3 @@ https://t.co/j04UuCoXME"
 898194227112296448,2017-08-17 14:46:06,#imlbarclaysfmbdeal $BARC.zw - unchanged to remain at 3.10 Vol traded: 0 YTD: -3.12% YOY: 106.66% $ZSE.zw #stocks…… https://t.co/arrBe5ACdO
 898193469616791552,2017-08-17 14:43:05,"Foreign Companies Index $FCI.bw - unchanged to remain at 1,581.65 YTD: -0.25% YOY: -1.12% $BSE.bw #stocks #indices… https://t.co/LKmszvK8Ho"
 898193467901214722,2017-08-17 14:43:05,Minings Index $MINING.zw - unchanged to remain at 74.04 YTD: 26.54% YOY: 180.98% $ZSE.zw #stocks #indices #Africa… https://t.co/dnyRwRi7Bl
-898191978172604416,2017-08-17 14:37:09,$MASH.zw - unchanged to remain at 2.20 Vol traded: 0 YTD: 10.55% YOY: 33.33% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/8TtWF0XDNJ
-898191965195452417,2017-08-17 14:37:06,"$TNM.mw - unchanged to remain at 1,500.00 Vol traded: 0 YTD: 147.93% YOY: 108.91% $MSE.mw #stocks #Africa #Malawi https://t.co/gw1NyScgMn"
-898189449095282689,2017-08-17 14:27:06,"$NMB.zw - down -15.32% to close at 4.20 Vol traded: 17,285,716 YTD: 7.69% YOY: 10.52% $ZSE.zw #stocks #Africa… https://t.co/5bcciZzcxE"
-898189444045357058,2017-08-17 14:27:05,"$OKZ.zw - up 1.23% to close at 11.50 Vol traded: 9,500 YTD: 61.97% YOY: 238.23% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/AHEiKqDkOH"
-898189440241119232,2017-08-17 14:27:04,$EDGR.zw - unchanged to remain at 5.20 Vol traded: 0 YTD: 8.33% YOY: 8.33% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/xOuCtMze1Z
-898151183079964672,2017-08-17 11:55:03,Econet Wireless Zimbabwe releases 2017 annual report https://t.co/lpOrObdQvR $ECO.zw
-897868072102612994,2017-08-16 17:10:04,"$OKZ.zw - up 2.34% to close at 11.36 Vol traded: 47,000 YTD: 60.00% YOY: 244.24% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/Vv8gcvuYJA"
-897868069875273728,2017-08-16 17:10:04,$EDGR.zw - unchanged to remain at 5.20 Vol traded: 0 YTD: 8.33% YOY: 8.33% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/wi7V2Rdxn9
-897868066322694144,2017-08-16 17:10:03,"$NMB.zw - unchanged to remain at 4.96 Vol traded: 1,056,579 YTD: 27.17% YOY: 30.52% $ZSE.zw #stocks #Africa… https://t.co/rUEfOqVjik"
-897864079515111424,2017-08-16 16:54:12,"$ECO.zw - unchanged to remain at 42.00 Vol traded: 26,785 YTD: 40.00% YOY: 111.05% $ZSE.zw #stocks #Africa… https://t.co/bcU0peVAzw"
-897864061559259136,2017-08-16 16:54:08,"$CEC.zm - unchanged to remain at 1.46 Vol traded: 21,477 YTD: 69.76% YOY: 108.57% $LuSE.zm #stocks #Africa #Zambia… https://t.co/x8UOyicFci"
-897856291619577856,2017-08-16 16:23:15,"$CRESTA.bw - unchanged to remain at 130.00 Vol traded: 21,200 YTD: 1.56% YOY: 7.43% $BSE.bw #stocks #Africa… https://t.co/VvoHLr2cNA"
-897856280215212033,2017-08-16 16:23:13,$CRESTA.bw - unchanged to remain at 130.00 Vol traded: 0 YTD: 1.56% YOY: 7.43% $BSE.bw #stocks #Africa #Botswana… https://t.co/vTEaXcHb5u
-897856276184440832,2017-08-16 16:23:12,$ZANACO.zm - unchanged to remain at 0.75 Vol traded: 0 YTD: 158.62% YOY: -20.21% $LuSE.zm #stocks #Africa #Zambia… https://t.co/mlyr9GaToS
-897856268701900800,2017-08-16 16:23:10,$ZIMW.zw - unchanged to remain at 5.39 Vol traded: 0 YTD: 79.66% YOY: 169.50% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/eTlKs4xSkm
-897846685090566145,2017-08-16 15:45:05,$LuSE.zm TOP #LOSERS $PRIMA.zm -13.79% $AELZ.zm -0.05% #stocks #Africa #Zambia https://t.co/chfqrhqK3p
-897840662824984576,2017-08-16 15:21:09,"$SEED.zw - up 0.49% to close at 149.60 Vol traded: 60,739 YTD: 48.11% YOY: 162.45% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/38QUBiVAuw"
-897840655015202816,2017-08-16 15:21:07,SEED.zw | Release of 2017 Annual Report https://t.co/ykyT9l04kP $SEED.zw
-897839896974381056,2017-08-16 15:18:07,"Lusaka All Share Index $LASI.zm - down -0.06% to close at 4,749.50 YTD: 13.19% YOY: 3.41% $LuSE.zm #stocks #indices… https://t.co/5wmRd221c7"
-897838400429936640,2017-08-16 15:12:10,$FBC.zw - unchanged to remain at 13.74 Vol traded: 0 YTD: 71.75% YOY: 114.68% $ZSE.zw #stocks #Africa #Zimbabwe https://t.co/wk2eYrhvMA
-897837240461557761,2017-08-16 15:07:33,$REIZ.zm - unchanged to remain at 5.75 Vol traded: 0 YTD: 4.54% YOY: 36.90% $LuSE.zm #stocks #Africa #Zambia… https://t.co/dcz3rR6MfR
-897832462381760512,2017-08-16 14:48:34,TNM | 2017 interim financial results https://t.co/yO0zU73rIk $TNM.mw
-897831602058743810,2017-08-16 14:45:09,$INN.zw - unchanged to remain at 75.00 Vol traded: 410 YTD: 56.25% YOY: 294.73% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/8v51Ga9s4r
-897831590671208448,2017-08-16 14:45:06,$ZSE.zw TOP #MOVERS $DZL.zw +6.66% $ZBFH.zw +3.12% $AXIA.zw +2.36% $OKZ.zw +2.34% $SEED.zw +0.49% #stocks #Africa… https://t.co/Hs1ByMSxX4
-897830589327319040,2017-08-16 14:41:08,"$DLTA.zw - up 0.35% to close at 128.96 Vol traded: 7,846 YTD: 45.71% YOY: 93.92% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/SyX6llLAVh"
-897830582616342528,2017-08-16 14:41:06,$MASH.zw - unchanged to remain at 2.20 Vol traded: 0 YTD: 10.55% YOY: 33.33% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/9rDPMX0xAp
-897830572768149505,2017-08-16 14:41:04,Minings Index $MINING.zw - unchanged to remain at 74.04 YTD: 26.54% YOY: 180.98% $ZSE.zw #stocks #indices #Africa… https://t.co/19gtUECoSZ
-897828835680440320,2017-08-16 14:34:09,$FMHL.zw - unchanged to remain at 11.70 Vol traded: 0 YTD: 178.57% YOY: 431.81% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/NlA04o4wHG
-897828828277387264,2017-08-16 14:34:08,$ZSE.zw TOP #LOSERS $MEIK.zw -8.86% $PPC.zw -8.45% $CFI.zw -2.04% #stocks #Africa #Zimbabwe https://t.co/yfrm6r1C4M
-897828826222178304,2017-08-16 14:34:07,$CBZ.zw - unchanged to remain at 10.00 Vol traded: 0 YTD: -4.76% YOY: -3.38% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/AksKcXC1Q8
-897828818299125760,2017-08-16 14:34:05,$AFDS.zw - unchanged to remain at 60.00 Vol traded: 0 YTD: 0.00% YOY: 33.33% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/5kggBPNDxG
-897827075368693760,2017-08-16 14:27:10,$PEAR.zw - unchanged to remain at 3.70 Vol traded: 0 YTD: 5.71% YOY: 85.92% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/w4hFL25DVD
-897827057266073600,2017-08-16 14:27:05,"All Share Index $ALLSHA.mw - up 0.08% to close at 18,324.68 YTD: 37.56% YOY: 41.90% $MSE.mw #stocks #indices… https://t.co/3sMMStgLfK"
-897824430319058944,2017-08-16 14:16:39,$PHL.zw - unchanged to remain at 30.40 Vol traded: 0 YTD: 90.00% YOY: 213.40% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/I4YeB73gqH
-897824329345384448,2017-08-16 14:16:15,$BSE.bw TOP #LOSERS $LETSHE.bw -4.04% $FSG.bw -1.75% #stocks #Africa #Botswana https://t.co/r2m68m1M8Y
-897824326686097408,2017-08-16 14:16:14,"Domestic Financial Sector Index $DFSI.bw - unchanged to remain at 1,047.01 YTD: -4.34% YOY: -0.62% $BSE.bw #stocks… https://t.co/8aeJe5Azd7"
-897824325054504960,2017-08-16 14:16:14,"Domestic Financial Sector Index $DFSI.bw - unchanged to remain at 1,047.01 YTD: -4.34% YOY: -0.62% $BSE.bw #stocks… https://t.co/N4N6K19Bxf"
-897824322521255938,2017-08-16 14:16:13,$NTFD.zw - unchanged to remain at 380.00 Vol traded: 0 YTD: 5.48% YOY: 85.59% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/cQixWnLkqQ
-897824313222455296,2017-08-16 14:16:11,"$ZBFH.zw - up 3.12% to close at 16.50 Vol traded: 6,300 YTD: 265.04% YOY: 450.00% $ZSE.zw #stocks #Africa #Zimbabwe… https://t.co/kMIMPmZI9n"
