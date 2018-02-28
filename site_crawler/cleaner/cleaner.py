@@ -16,7 +16,6 @@ class Cleaner:
                 text = row['text']
                 clean_text = self.clean_tweets(text)
                 cleaned_text.append(clean_text)
-
         self.save_cleaned_csv('cleaned_'+csv_name,cleaned_text)
 
     def clean_tweets(self,tweet):
@@ -45,10 +44,34 @@ class Cleaner:
         final_text = html_escaped.replace(';','')
         return final_text
 
+    def pre_labeling(self,text):
+        lower_case_text = text.lower()
+        removed_url = re.sub(r'http\S+', '', lower_case_text)
+        return removed_url
+
     def save_cleaned_csv(self,name,tweets_list):
         with open('../data/twitter_data/cleaned_data/' + name + '.csv', 'w') as f:
             writer = csv.writer(f)
             writer.writerow(["text"])
+            for tweet in tweets_list:
+                writer.writerow([tweet,])
+        pass
+
+    def save_pre_labled_csv(self,csv_name):
+        cleaned_text = []
+        with open('../data/twitter_data/raw_data/' + csv_name + '.csv', newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                text = row['text']
+                clean_text = self.pre_labeling(text)
+                cleaned_text.append(clean_text)
+        self.save_pre_labeled_csv('unlabeled_' + csv_name, cleaned_text)
+
+
+    def save_pre_labeled_csv(self,name,tweets_list):
+        with open('../data/twitter_data/pre_labeled/' + name + '.csv', 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(["text","label"])
             for tweet in tweets_list:
                 writer.writerow([tweet,])
         pass
@@ -88,7 +111,8 @@ if __name__ == "__main__":
     ]
 
     for tweets_csv in tweets_csvs:
-        c.read_csv(tweets_csv)
+        # c.read_csv(tweets_csv)
+        c.save_pre_labled_csv(tweets_csv)
 
 
 
