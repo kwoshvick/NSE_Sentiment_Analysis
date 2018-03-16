@@ -39,7 +39,6 @@ class Cleaner:
         return final_text
 
     def pre_cleaning(self,text):
-        #escaping html characters
         html_escaped = html.unescape(text)
         final_text = html_escaped.replace(';','')
         return final_text
@@ -75,6 +74,8 @@ class Cleaner:
             for tweet in tweets_list:
                 writer.writerow([tweet,])
         pass
+
+
 
 
 if __name__ == "__main__":
