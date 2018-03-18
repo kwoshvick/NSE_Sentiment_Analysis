@@ -4,7 +4,6 @@ import string
 import html
 
 class Cleaner:
-
     def __init__(self):
         self.remove_punctuations = str.maketrans('', '', string.punctuation)
 
@@ -30,10 +29,9 @@ class Cleaner:
         # removed retweets
         removed_retweet = removed_username.replace("rt", "", True)  # remove to retweet
         # removing punctuations
-        # removed_punctuation = removed_retweet.translate(self.remove_punctuations)
-        # print(removed_username)
+        removed_punctuation = removed_retweet.translate(self.remove_punctuations)
         # remove spaces
-        remove_g_t = removed_retweet.replace("&gt", "", True)
+        remove_g_t = removed_punctuation.replace("&gt", "", True)
         remove_a_m_p = remove_g_t.replace("&amp", "", True)
         final_text = remove_a_m_p
         return final_text
@@ -66,7 +64,6 @@ class Cleaner:
                 cleaned_text.append(clean_text)
         self.save_pre_labeled_csv('unlabeled_' + csv_name, cleaned_text)
 
-
     def save_pre_labeled_csv(self,name,tweets_list):
         with open('../data/twitter_data/pre_labeled/' + name + '.csv', 'w') as f:
             writer = csv.writer(f)
@@ -74,8 +71,6 @@ class Cleaner:
             for tweet in tweets_list:
                 writer.writerow([tweet,])
         pass
-
-
 
 
 if __name__ == "__main__":
@@ -112,7 +107,6 @@ if __name__ == "__main__":
     ]
 
     for tweets_csv in tweets_csvs:
-        # c.read_csv(tweets_csv)
         c.save_pre_labled_csv(tweets_csv)
 
 
