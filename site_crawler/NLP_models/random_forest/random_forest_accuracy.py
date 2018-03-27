@@ -7,9 +7,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
-
-
-
 def readcsv():
     df = pd.read_csv("../../data/dataset/csv/dataset_sentiment.csv", )  # read labelled tweets
     X = df.text
@@ -24,9 +21,6 @@ def random_forest_accuracy(X, y):
     print("random forest metrics")
     print(metrics.accuracy_score(y_test, ypred))
     print(metrics.classification_report(y_test, ypred))
-
-
-
 
 
 def main():
