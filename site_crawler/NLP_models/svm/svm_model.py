@@ -103,8 +103,8 @@ def evaluatemodel(y_pred, y_test):
 def main():
     shufflecsv()
     X, y = readcsv()
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3,
-                                                        random_state=0)  # split data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4,
+                                                        random_state=1)  # split data into training and testing sets
 
     svm_clf = createSVM(X_train, y_train)
     y_pred = svm_clf.predict(X_test)
