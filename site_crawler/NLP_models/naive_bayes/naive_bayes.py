@@ -1,55 +1,127 @@
-import sklearn
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-import numpy as np
-from sklearn import datasets
-from pprint import pprint
+from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
-from sklearn import svm
+from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import learning_curve
+from sklearn.model_selection import cross_val_predict
+from sklearn.feature_selection import mutual_info_classif
+from sklearn.metrics import roc_curve, auc
+from sklearn.metrics import classification_report
+from sklearn.svm import SVC
+from sklearn import metrics
 
-# Declare the categories
-categories = ['Crime', 'Family']
-
-# Load the dataset
-docs_to_train = sklearn.datasets.load_files("/Users/danielhoadley/Documents/Development/Python/Test_Data", description=None, categories=categories,
-                                            load_content=True, shuffle=True, encoding='utf-8', decode_error='strict', random_state=0)
-
-train_X, test_X, train_y, test_y = train_test_split(docs_to_train.data,
-                               docs_to_train.target,
-                               test_size = 3)
-print (len(docs_to_train.data))
-
-print (train_X)
-
-# Vectorise the dataset
-
-count_vect = CountVectorizer()
-X_train_counts = count_vect.fit_transform(docs_to_train.data)
-
-# Fit the estimator and transform the vector to tf-idf
-
-tf_transformer = TfidfTransformer(use_idf=False).fit(X_train_counts)
-X_train_tf = tf_transformer.transform(X_train_counts)
-X_train_tf.shape
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+import string
 
 
-tfidf_transformer = TfidfTransformer()
-X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
-X_train_tfidf.shape
+def readcsv():
+    df = pd.read_csv("../data/dataset/csv/dataset_sentiment.csv", )  # read labelled tweets
+    # df2=df.reindex(np.random.permutation(df.index))
+    X = df.text
+    y = df.label
+    return X, y
 
-# Train the naive Bayes classifier
 
-clf = MultinomialNB().fit(X_train_tfidf, docs_to_train.target)
+def createSVM(X, y):
+    svm_clf = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('svm', SVC(kernel="linear", C=1))])
+    svm_clf = svm_clf.fit(X, y)
+    return svm_clf
 
-docs_new = ['The defendant used a knife.', 'This court will protect vulnerable adults', 'The appellant was sentenced to seven years']
-X_new_counts = count_vect.transform(docs_new)
-X_new_tfidf = tfidf_transformer.transform(X_new_counts)
 
-predicted = clf.predict(X_new_tfidf)
+def createNB(X, y):
+    nb_clf = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('nb', MultinomialNB())])
+    nb_clf = nb_clf.fit(X, y)
+    return nb_clf
 
-# Print the results
 
-for doc, category in zip(docs_new, predicted):
-    print('%r => %s' % (doc, docs_to_train.target_names[category]))
+def drawrocSVM(y_test, y_pred):
+    fpr, tpr, threshold = roc_curve(y_test, y_pred)
+    print("Drawing")
+    roc_auc = auc(fpr, tpr)
+    plt.title('Receiver Operating Characteristic')
+    plt.plot(fpr, tpr, 'b', label='SVM AUC = %0.2f' % roc_auc, color='b')
+    plt.legend(loc='lower right')
+    plt.plot([0, 1], [0, 1], 'r--')
+    plt.xlim([-0.1, 1.2])
+    plt.ylim([-0.1, 1.2])
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    plt.show()
+
+
+def drawrocNB(y_test, y_pred):
+    fpr, tpr, threshold = roc_curve(y_test, y_pred)
+    print("Drawing")
+    roc_auc = auc(fpr, tpr)
+    plt.title('Receiver Operating Characteristic')
+    plt.plot(fpr, tpr, 'b', label='NB AUC = %0.2f' % roc_auc, color='r')
+    plt.legend(loc='lower right')
+    plt.plot([0, 1], [0, 1], 'r--')
+    plt.xlim([-0.1, 1.2])
+    plt.ylim([-0.1, 1.2])
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    plt.show()
+
+
+def drawrocKNN(y_test, y_pred):
+    fpr, tpr, threshold = roc_curve(y_test, y_pred)
+    print("Drawing")
+    roc_auc = auc(fpr, tpr)
+    plt.title('Receiver Operating Characteristic')
+    plt.plot(fpr, tpr, 'b', label='KNN AUC = %0.2f' % roc_auc, color='g')
+    plt.legend(loc='lower right')
+    plt.plot([0, 1], [0, 1], 'r--')
+    plt.xlim([-0.1, 1.2])
+    plt.ylim([-0.1, 1.2])
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    plt.show()
+
+
+def experiment1(X, y):
+    """Different Classifiers"""
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    # SVM classifier
+    svm = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('svm', SVC(kernel="linear", C=1))])
+    svm = svm.fit(X_train, y_train)
+    ypred = svm.predict(X_test)
+    print("SVM metrics")
+    print(metrics.accuracy_score(y_test, ypred))
+    print(metrics.classification_report(y_test, ypred))
+    drawrocSVM(y_test, ypred)
+    # NB classifier
+    nb = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('nb', MultinomialNB())])
+    nb = nb.fit(X_train, y_train)
+    yprednb = nb.predict(X_test)
+    print("NB Metrics")
+    print(metrics.accuracy_score(y_test, yprednb))
+    print(metrics.classification_report(y_test, yprednb))
+    drawrocNB(y_test, yprednb)
+    # KNN classifier
+    knn = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('knn', KNeighborsClassifier())])
+    knn = knn.fit(X_train, y_train)
+    ypredknn = knn.predict(X_test)
+    print("KNN evaluation")
+    print(metrics.accuracy_score(y_test, ypredknn))
+    print(metrics.classification_report(y_test, ypredknn))
+    drawrocKNN(y_test, ypredknn)
+
+
+def main():
+    print("Hello Main method")
+    X, y = readcsv()
+    print("Experiment One")
+    experiment1(X, y)  # call Different Experiments
+
+
+if __name__ == "__main__":
+    main()
