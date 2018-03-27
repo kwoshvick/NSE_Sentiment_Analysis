@@ -12,14 +12,10 @@ def readcsv():
     y = df.label
     return X, y
 
-
 def createSVM(X, y):
     svm_clf = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('svm', SVC(kernel="linear", C=1))])
     svm_clf = svm_clf.fit(X, y)
     return svm_clf
-
-
-
 
 def svm_ngram(X, y):
     """Different features with SVM"""
@@ -69,7 +65,7 @@ def svm_ngram(X, y):
 
 def main():
     X, y = readcsv()
-    svm_ngram(X, y)  # call Different Experiments
+    svm_ngram(X, y)
 
 
 if __name__ == "__main__":
