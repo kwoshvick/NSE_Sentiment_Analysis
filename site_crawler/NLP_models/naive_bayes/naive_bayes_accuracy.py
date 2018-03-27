@@ -34,7 +34,7 @@ def drawrocNB(y_test, y_pred):
 
 def naive_bayes_accuraccy(X, y):
     """Different Classifiers"""
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
     nb = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('nb', MultinomialNB())])
     nb = nb.fit(X_train, y_train)
     yprednb = nb.predict(X_test)

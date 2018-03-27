@@ -30,7 +30,7 @@ def drawrocSVM(y_test, y_pred):
 
 
 def svm_accuracy(X, y):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
     svm = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('svm', SVC(kernel="linear", C=1))])
     svm = svm.fit(X_train, y_train)
     ypred = svm.predict(X_test)
