@@ -33,7 +33,7 @@ class Dataset_Builder:
         pass
 
     def extract_sentiment_csv(self,csv_name):
-        with open('../data/twitter_data/labeled_data/'+csv_name+'.csv', newline='', encoding='utf-8') as csvfile:
+        with open('../data/twitter_data/labeled_data/unlabeled_'+csv_name+'.csv', newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 # negative
@@ -52,45 +52,45 @@ class Dataset_Builder:
 
 if __name__ == "__main__":
     D_builder = Dataset_Builder()
-    tweets_csvs = [
-        '1'
-    ]
     # tweets_csvs = [
-    #     'Business_KE',
-    #     'MadeItInAfrica',
-    #     'IFCAfrica',
-    #     'africareview',
-    #     'AfDB_Group',
-    #     '_AfricanUnion',
-    #     'Taifa_Leo',
-    #     'BD_Africa',
-    #     'RadioCitizenFM',
-    #     'citizentvkenya',
-    #     'KTNKenya',
-    #     'K24Tv',
-    #     'StandardKenya',
-    #     'TheStarKenya',
-    #     'radiomaisha',
-    #     'KBCChannel1',
-    #     'CapitalFMKenya',
-    #     'African_Markets',
-    #     'Africafinancial',
-    #     'InvestInAfrica',
-    #     'AfricanInvestor',
-    #     'forbesafrica',
-    #     'cnbcafrica',
-    #     'BBCAfrica',
-    #     'CNNAfrica',
-    #     'allafrica',
-    #     'ReutersAfrica',
-    #     'VenturesAfrica',
-    #     'BBGAfrica',
-    #     'GhettoRadio895',
-    #     'kenyanwalstreet',
-    #     'SokoAnalyst',
-    #     'NSEKenya',
-    #     'wazua'
+    #     '1'
     # ]
+    tweets_csvs = [
+        'Business_KE',
+        'MadeItInAfrica',
+        'IFCAfrica',
+        'africareview',
+        'AfDB_Group',
+        '_AfricanUnion',
+        'Taifa_Leo',
+        # 'BD_Africa',
+        'RadioCitizenFM',
+        'citizentvkenya',
+        'KTNKenya',
+        'K24Tv',
+        'StandardKenya',
+        'TheStarKenya',
+        'radiomaisha',
+        'KBCChannel1',
+        # 'CapitalFMKenya',
+        # 'African_Markets',
+        # 'Africafinancial',
+        'InvestInAfrica',
+        'AfricanInvestor',
+        # 'forbesafrica',
+        # 'cnbcafrica',
+        # 'BBCAfrica',
+        # 'CNNAfrica',
+        # 'allafrica',
+        'ReutersAfrica',
+        'VenturesAfrica',
+        # 'BBGAfrica',
+        'GhettoRadio895',
+        'kenyanwalstreet',
+        'SokoAnalyst',
+        'NSEKenya',
+        'wazua'
+    ]
 
     for tweets_csv in tweets_csvs:
         D_builder.extract_sentiment_csv(tweets_csv)
