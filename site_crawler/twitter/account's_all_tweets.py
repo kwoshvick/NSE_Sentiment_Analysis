@@ -10,7 +10,6 @@ class Account_All_Tweets:
         self.api = credentials.authentinticate_twitter()
 
     def get_all_tweets(self,profile_name):
-            print(profile_name)
             # Twitter only allows access to a users most recent 3240 tweets with this method
             # initialize a list to hold all the tweepy Tweets
             alltweets = []
@@ -42,40 +41,40 @@ class Account_All_Tweets:
 if __name__ == "__main__":
     account_tweets = Account_All_Tweets()
     twitter_handles = [
-        'Business_KE',
-        'MadeItInAfrica',
-        'IFCAfrica',
-        'africareview',
-        'AfDB_Group',
-        '_AfricanUnion',
-        'Taifa_Leo',
-        'BD_Africa',
-        'RadioCitizenFM',
-        'citizentvkenya',
-        'KTNKenya',
-        'K24Tv',
-        'StandardKenya',
-        'TheStarKenya',
-        'radiomaisha',
-        'KBCChannel1',
-        'CapitalFMKenya',
-        'African_Markets',
-        'Africafinancial',
-        'InvestInAfrica',
-        'AfricanInvestor',
-        'forbesafrica',
-        'cnbcafrica',
-        'BBCAfrica',
-        'CNNAfrica',
-        'allafrica',
-        'ReutersAfrica',
-        'VenturesAfrica',
-        'BBGAfrica',
-        'GhettoRadio895',
-        'kenyanwalstreet',
-        'SokoAnalyst',
-        'NSEKenya',
-        'wazua'
+        'Business_KE'
+        # 'MadeItInAfrica',
+        # 'IFCAfrica',
+        # 'africareview',
+        # 'AfDB_Group',
+        # '_AfricanUnion',
+        # 'Taifa_Leo',
+        # 'BD_Africa',
+        # 'RadioCitizenFM',
+        # 'citizentvkenya',
+        # 'KTNKenya',
+        # 'K24Tv',
+        # 'StandardKenya',
+        # 'TheStarKenya',
+        # 'radiomaisha',
+        # 'KBCChannel1',
+        # 'CapitalFMKenya',
+        # 'African_Markets',
+        # 'Africafinancial',
+        # 'InvestInAfrica',
+        # 'AfricanInvestor',
+        # 'forbesafrica',
+        # 'cnbcafrica',
+        # 'BBCAfrica',
+        # 'CNNAfrica',
+        # 'allafrica',
+        # 'ReutersAfrica',
+        # 'VenturesAfrica',
+        # 'BBGAfrica',
+        # 'GhettoRadio895',
+        # 'kenyanwalstreet',
+        # 'SokoAnalyst',
+        # 'NSEKenya',
+        # 'wazua'
     ]
 
     for twitter_handle in twitter_handles:
