@@ -52,9 +52,7 @@ class Dataset_Builder:
 
 if __name__ == "__main__":
     D_builder = Dataset_Builder()
-    # tweets_csvs = [
-    #     '1'
-    # ]
+
     tweets_csvs = [
         'Business_KE',
         'MadeItInAfrica',
